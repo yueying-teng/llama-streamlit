@@ -21,8 +21,9 @@ st.markdown(f"""
 
 # set prompt template
 prompt_template = """You are a human who is trying to sell an item on an e-commerce platform and you need to come up with five hashtags that best describe the item.
-
 Come up with five hashtags based on the item's title that will help you reach a larger amount of buyers and get more engagement.
+Note that hashtags should not include item conditions like repair needed and brand new.
+Organize the five hashtags using bullet points.
 """
 
 system_message_prompt = SystemMessagePromptTemplate.from_template(prompt_template)
@@ -38,11 +39,11 @@ callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
 llm = LlamaCpp(
     # model_path="./models/llama-2-13b.ggmlv3.q4_0.bin",
     model_path="./models/llama-2-13b-chat.ggmlv3.q4_0.bin",
-    temperature=0.7,
-    repeat_penalty=1.176,
+    temperature=0.72,
+    repeat_penalty=1.1,
     max_tokens=2048,
-    top_p=0.1,
-    top_k=40,
+    top_p=0.73,
+    top_k=0,
     seed=2023,
     callback_manager=callback_manager,
     verbose=True,
