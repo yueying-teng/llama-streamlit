@@ -23,7 +23,7 @@ st.markdown(f"""
 prompt_template = """You are a human who is trying to sell an item on an e-commerce platform and you need to come up with five hashtags that best describe the item.
 Come up with five hashtags based on the item's title that will help you reach a larger amount of buyers and get more engagement.
 Note that hashtags should not include item conditions like repair needed and brand new.
-Organize the five hashtags using bullet points and provide no explanations at all.
+Organize the five hashtags using bullet points.
 """
 
 system_message_prompt = SystemMessagePromptTemplate.from_template(prompt_template)
