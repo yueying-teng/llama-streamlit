@@ -35,6 +35,7 @@ streamlit run app.py
 ```
 
 5. navigate to [the app here](http://localhost:8501/)
+![alt text](images/streamlit_app.png)
 
 ## Some examples
 <details>
