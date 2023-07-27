@@ -9,12 +9,18 @@ Recommend hashtags based on the item's title.
 - However, some degradation is observed in the recommended hashtags if it's not allowed to return any explanations.
 
 ### Steps to run it locally
-1. download the [ggml model](https://github.com/ggerganov/ggml)
+1. clone the repo
 ```bash
+git clone git@github.com:yueying-teng/llama-streamlit.git
+```
+
+2. download the [ggml model](https://github.com/ggerganov/ggml)
+```bash
+cd llama-streamlit/models
 wget https://huggingface.co/TheBloke/Llama-2-13B-chat-GGML/resolve/main/llama-2-13b-chat.ggmlv3.q4_0.bin
 ```
 
-2. create conda environment and install dependencies
+3. create conda environment and install dependencies
 ```bash
 conda create -n llama python=3.10.0
 
@@ -23,10 +29,12 @@ conda activate llama
 pip3 install -r requirements.txt
 ```
 
-3. start the Streamlit app
+4. start the Streamlit app
 ```bash
 streamlit run app.py
 ```
+
+5. navigate to [the app here](http://localhost:8501/)
 
 ## Some examples
 <details>
